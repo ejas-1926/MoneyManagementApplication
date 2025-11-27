@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ScreenTransaction extends StatelessWidget {
-  const ScreenTransaction({super.key});
+class ExpenseCategorylist extends StatelessWidget {
+  const ExpenseCategorylist({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,17 +10,15 @@ class ScreenTransaction extends StatelessWidget {
         return Card(
           elevation: 5,
           child: ListTile(
-            title: Text('1000'),
-            subtitle: Text('Spent'),
-            leading: Text(DateTime.now().toString()),
-            trailing: Text('Db'),
+            leading: Text("Expense"),
+            trailing: IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
           ),
         );
       },
       separatorBuilder: (context, index) {
-        return SizedBox(height: 10);
+        return SizedBox(height: 5);
       },
-      itemCount: 10,
+      itemCount: 3,
     );
   }
 }
